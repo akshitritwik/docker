@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t akshitritwik/docker -f Dockerfile.dev .
+  - docker build -t akshit/docker -f Dockerfile.dev .
 
 script:
-  -  docker run -e CI=true akshitritwik/docker npm run test -- -- coverage
+  -  docker run -e CI=true akshit/docker npm run test
